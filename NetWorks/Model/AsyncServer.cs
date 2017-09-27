@@ -21,9 +21,7 @@ namespace NetWorks.Model
         {
             // Data buffer for incoming data.
             byte[] bytes = new Byte[1024];
-            
-            Dispatcher.CurrentDispatcher.
-          
+                                 
             IPHostEntry ipHostInfo = Dns.Resolve(IP);
             IPAddress ipAddress = ipHostInfo.AddressList[0];
             IPEndPoint localEndPoint = new IPEndPoint(ipAddress, port);
@@ -34,11 +32,12 @@ namespace NetWorks.Model
             try
             {
                 listener.Bind(localEndPoint); listener.Listen(100);
-
+                
+                listener.Blocking = true;
                 while (true)
                 {
                     allDone.Reset();
-
+                    
                     listener.BeginAccept(
                         new AsyncCallback(AcceptCallback),
                         listener);

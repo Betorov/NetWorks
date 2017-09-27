@@ -64,6 +64,7 @@
     </Compile>
     <Compile Include="Model\AsyncClient.cs" />
     <Compile Include="Model\AsyncServer.cs" />
+    <Compile Include="Model\SyncServer.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

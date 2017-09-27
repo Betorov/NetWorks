@@ -42,6 +42,7 @@
                 Height="25.648" VerticalAlignment="Top" Content="Запустить сервер" Command="{Binding startServer}"/>
         <Button Margin="256.7,114.307,0,0" Height="25.648"  
                 VerticalAlignment="Top" Content="Выбрать файл и отправить" Command="{Binding sendFile}"/>
-        <ProgressBar HorizontalAlignment="Left" Height="10" Margin="0,140,0,0" VerticalAlignment="Top" Width="252"/>
+        <ProgressBar HorizontalAlignment="Left" Height="15" Margin="0,165,0,0" VerticalAlignment="Top" Width="252"/>
+        <Label x:Name="clientConnect" Content="Клиентов: " HorizontalAlignment="Left" Margin="0,139,0,0" VerticalAlignment="Top" Width="252"/>
     </Grid>
 </Window>

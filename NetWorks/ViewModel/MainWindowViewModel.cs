@@ -39,7 +39,8 @@ namespace NetWorks.ViewModel
                     try
                     {
                         AsyncServer serv = new AsyncServer(iPGet, Convert.ToInt32(portGet));
-                        Thread tr = new Thread(new ThreadStart(serv.StartListening));
+                        Thread tr = new Thread(new ThreadStart(serv.StartListening)); tr.Name = "ServerSocket";
+
                         tr.Start();
                     } catch(Exception e)
                     {
