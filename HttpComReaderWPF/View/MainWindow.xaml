@@ -1,0 +1,29 @@
+﻿<Window x:Class="HttpComReaderWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:command="clr-namespace:HttpComReaderWPF.Command"
+        xmlns:dc="clr-namespace:HttpComReaderWPF.ViewModel"
+        xmlns:local="clr-namespace:HttpComReaderWPF"
+        mc:Ignorable="d"
+        Title="HttpReaderWithCom" Height="511.621" Width="752.982" ResizeMode="NoResize">
+    <Window.DataContext>
+        <dc:MainWindowView x:Name="MainContext"/>
+    </Window.DataContext>
+    <Grid>
+        <StackPanel Margin="208,24,0,355">
+            <Label Content="Адрес: " Margin="10"/>
+            <TextBox Text="{Binding Path=RemoteAddress, Mode=OneWayToSource}" Margin="10" MinHeight="25"/>
+        </StackPanel>
+        <StackPanel Margin="0,24,537,355" >
+            <Label Content="Порт: " Margin="10"/>
+            <TextBox Text="{Binding Path=Port, Mode=OneWayToSource}" Margin="10" MinHeight="25"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Margin="0,126,0,296">
+            <Button Content="Загрузим страничку" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Center" Padding="3" Command="{Binding Path=DownloadCommand}"/>
+            <ProgressBar Margin="5,0,5,0" MinWidth="100" MinHeight="10" IsIndeterminate="{Binding Path=IsDownloading}"/>
+        </StackPanel>
+        <WebBrowser command:BrowserBehavior.HtmlString="{Binding HtmlBody}"  Margin="0,185,0,0"/>
+    </Grid>
+</Window>

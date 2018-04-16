@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.15
+VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab1TCP", "NetWorks\Lab1TCP.csproj", "{6EFF51FD-C139-42DF-BC73-5CA5ED69B6CA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockingTCPSocket", "NetWorks\BlockingTCPSocket.csproj", "{6EFF51FD-C139-42DF-BC73-5CA5ED69B6CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sniffer", "Sniffer\Sniffer.csproj", "{5C7ACEB9-A6F7-40C3-9F60-63E2FD928411}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpComReaderWPF", "HttpComReaderWPF\HttpComReaderWPF.csproj", "{79B8E2CD-F74C-4F61-8D0F-31A755FEAD89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{6EFF51FD-C139-42DF-BC73-5CA5ED69B6CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EFF51FD-C139-42DF-BC73-5CA5ED69B6CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EFF51FD-C139-42DF-BC73-5CA5ED69B6CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C7ACEB9-A6F7-40C3-9F60-63E2FD928411}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C7ACEB9-A6F7-40C3-9F60-63E2FD928411}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C7ACEB9-A6F7-40C3-9F60-63E2FD928411}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C7ACEB9-A6F7-40C3-9F60-63E2FD928411}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79B8E2CD-F74C-4F61-8D0F-31A755FEAD89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79B8E2CD-F74C-4F61-8D0F-31A755FEAD89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79B8E2CD-F74C-4F61-8D0F-31A755FEAD89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79B8E2CD-F74C-4F61-8D0F-31A755FEAD89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

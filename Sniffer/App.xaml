@@ -1,0 +1,15 @@
+<Application x:Class="Sniffer.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:Sniffer" 
+             xmlns:vm="clr-namespace:Sniffer.ViewModel" xmlns:views="clr-namespace:Sniffer.View"
+             StartupUri="View/MainWindow.xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             d1p1:Ignorable="d" xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006">
+  <Application.Resources>
+        <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" xmlns:vm="clr-namespace:Sniffer.ViewModel" />
+        <DataTemplate DataType="{x:Type vm:SnifferViewModel}">
+            <views:SnifferView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:UdpGeneratorViewModel}">
+            <views:UdpGeneratorView/>
+        </DataTemplate>
+    </Application.Resources>
+</Application>
